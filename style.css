@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1em;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik";
+  background-color: hsl(226, 43%, 10%);
+  min-width: 1340px;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.2rem;
+}
+
+/* ===========================START MAIN AREA======================= */
+.site {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "info work play study"
+    "info exercise social self";
+  margin-top: 100px;
+  gap: 25px;
+  row-gap: 55px;
+  padding: 5rem 10rem;
+}
+/* =========================START INFO AREA=========================== */
+.info {
+  grid-area: info;
+  border-radius: 12px;
+  background-color: hsl(235, 46%, 20%);
+  align-items: center;
+  justify-content: center;
+}
+
+.person {
+    background-color: hsl(246, 80%, 60%);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+}
+
+.person-img {
+  width: 30%;
+  border: 3px solid hsl(236, 100%, 87%);
+  border-radius: 100%;
+}
+
+.info-para{
+    margin-top: 1rem;
+    color:  hsl(235, 45%, 61%);
+    font-weight: 400;
+    align-items: center;
+}
+
+.info-h1{
+    font-weight: 500;
+    margin-top: 1rem;
+    color: hsl(236, 100%, 87%);
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    align-items: center;
+}
+
+.day{
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.day-para{
+    margin-top: 1rem;
+}
+
+.day-para a{
+    text-decoration: none;
+    color: hsl(235, 45%, 61%);
+    cursor: pointer;
+    align-items: center;
+}
+
+.day-para a:focus, a:hover{
+    color: hsl(236, 100%, 87%);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+
+/* ========================START DETAIL AREA============================ */
+
+.detail{
+    border-radius: 12px;
+    align-items: center;
+}
+
+.one {
+  grid-area: work;
+  background-image: url(./images/icon-work.svg);
+  background-color: hsl(15, 100%, 70%);
+  background-repeat:no-repeat;
+  background-position:right top;
+}
+
+.two {
+  grid-area: play;
+  background-image: url(./images/icon-play.svg);
+  background-color: hsl(195, 74%, 62%);
+  background-repeat:no-repeat;
+  background-position:right top;
+}
+
+.three {
+  grid-area: study;
+  background-image: url(./images/icon-study.svg);
+  background-color: hsl(348, 100%, 68%);
+  background-repeat:no-repeat;
+  background-position:right top;
+}
+
+.four {
+  grid-area: exercise;
+  background-image: url(./images/icon-exercise.svg);
+  background-color: hsl(145, 58%, 55%);
+  background-repeat:no-repeat;
+  background-position:right top;
+}
+
+.five {
+  grid-area: social;
+  background-image: url(./images/icon-social.svg);
+  background-color: hsl(264, 64%, 52%);
+  background-repeat:no-repeat;
+  background-position:right top;
+}
+.six {
+  grid-area: self;
+  background-image: url(./images/icon-self-care.svg);
+  background-color: hsl(43, 84%, 65%);
+  background-repeat:no-repeat;
+  background-position:right top;
+}
+
+.activity{
+    margin-top: 3rem;
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 12px;
+    height: 78%;
+    padding: 1rem 2rem;
+    align-items: center;
+    cursor: pointer;
+    color: hsl(236, 100%, 87%);
+}
+
+.activity:hover{
+  background-color: hsl(235, 45%, 61%);
+}
+
+.head{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.head-h2{
+  margin-top: 2rem;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  font-weight: 500;
+}
+
+.head-h3{
+  margin-top: 1rem;
+  font-weight: 300;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+}
+
+/* ===========================END MAIN AREA======================= */
+
+/* =============================START FOOTER  AREA=========================== */
+.foot {
+  text-align: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 20px;
+  color: hsl(0, 100%, 67%);
+  background-color: black;
+  margin-top: 85px;
+}
+
+.foot a {
+  text-decoration: none;
+  color: hsl(39, 100%, 56%);
+}
+
+.foot a:hover {
+  color: hsl(300, 69%, 71%);
+}
+/* =============================END FOOTER  AREA=========================== */
+/* ===========================START MEDIA QUERY============================= */
+@media screen and (max-width: 768px) {
+  body{
+    min-width: 768px;
+  }
+
+  .site{
+    padding: 5rem 0.6rem;
+    gap: 10px;
+  }
+
+  .activity{
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width:400px) {
+  body{
+    min-width: 400px;
+  }
+
+  .site{
+    margin-top: 50px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'info'
+    'work'
+    'play'
+    'study'
+    'exercise'
+    'social'
+    'self';
+    gap: 25px;
+  }
+
+  .day{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  .hour{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  .head-h3{
+    margin-top: 2.5rem;
+  }
+
+  .person{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+  }
+
+  .info-h1{
+    margin-bottom: 0px;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+
+  .info-para{
+    margin-top: 0rem;
+  }
+}
+/* ===========================END MEDIA QUERY============================= */
